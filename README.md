@@ -5,7 +5,7 @@ Built for developers who want *database power without ORM overhead*.
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Async I/O** — built on `aiosqlite`
 - **Optional FileLock** — safe access across multiple processes
@@ -17,7 +17,7 @@ Built for developers who want *database power without ORM overhead*.
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 pip install fastquartdb
@@ -31,7 +31,7 @@ uv add fastquartdb
 
 ---
 
-## ⚙️ Initialization
+## Initialization
 
 Start the database engine once at application startup:
 
@@ -49,7 +49,7 @@ db = AsyncDatabaseManager.get()
 
 ---
 
-## 🧱 Defining Models
+## Defining Models
 
 Every model inherits from `BaseModel`.  
 You define columns using the lightweight `Column` helper.
@@ -67,7 +67,7 @@ Each subclass automatically gets a matching table (`user` by default).
 
 ---
 
-## 🧠 CRUD Operations
+## CRUD Operations
 
 ### Insert
 
@@ -101,7 +101,7 @@ await User.delete(filters={"age": [("<", 18)]})
 
 ---
 
-## 🔒 FileLock Mode
+## FileLock Mode
 
 Enable safe access if multiple processes may touch the same SQLite file:
 
@@ -113,7 +113,7 @@ Each query is automatically wrapped in a file-based async lock.
 
 ---
 
-## 🧩 Example Integration with Quart
+## Example Integration with Quart
 
 ```python
 from quart import Quart, jsonify
@@ -139,7 +139,7 @@ if __name__ == "__main__":
 
 ---
 
-## 🧰 Design Philosophy
+## Design Philosophy
 
 FastQuartDB aims to be:
 - **smaller** than SQLAlchemy
@@ -151,13 +151,13 @@ No declarative meta, no complex migrations — just tables, data, and async Pyth
 
 ---
 
-## 📄 License
+## License
 
 MIT © 2025 PeeeterS
 
 ---
 
-## 💡 Future Ideas
+## Future Ideas
 
 - `JOIN` and aggregation support  
 - `upsert()` helper  
